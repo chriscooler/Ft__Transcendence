@@ -1,0 +1,31 @@
+{
+	"/": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/Chat": [
+		"src/routes/+layout.server.ts"
+	],
+	"/DM": [
+		"src/routes/+layout.server.ts"
+	],
+	"/Friends": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/Profile": [
+		"src/routes/+layout.server.ts"
+	],
+	"/game": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/game/create": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/game/matchmaking": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	]
+}

@@ -1,0 +1,57 @@
+version: "3"
+
+networks:
+  net:
+    driver: bridge
+
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      args:
+        FRONTEND_PORT: ${FRONTEND_PORT}
+    ports:
+      - "${FRONTEND_PORT}:5173"
+    networks:
+      - net
+    env_file:
+      - .env
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/static:/app/static
+      - node_modules_frontend:/app/node_modules
+    depends_on:
+      - backend
+  backend:
+    container_name: backend
+    build: ./backend
+    volumes:
+      - ./backend:/usr/src/app
+      - node_modules_backend:/usr/src/app/node_modules
+    ports:
+      - 3000:3000
+      - 3001:3001
+      - 3002:3002
+    env_file:
+      - .env
+    networks:
+      - net
+    depends_on:
+      - db
+  db:
+    container_name: "db"
+    image: postgres:14.5
+    restart: always
+    volumes:
+      - volume_db:/var/lib/postgresql/data
+    env_file:
+      - .env
+    networks:
+      - net
+    ports:
+      - "5432:5432"
+volumes:
+  volume_db:
+  node_modules_frontend:
+  node_modules_backend:

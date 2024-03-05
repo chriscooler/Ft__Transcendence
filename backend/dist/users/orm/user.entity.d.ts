@@ -1,0 +1,35 @@
+import { GameEntity } from "./game.entity";
+import { ChatRoomMember } from "src/chat/chat_room_member.entity";
+import { ChatMessage } from "src/chat/chat_message.entity";
+export declare class UserEntity {
+    id: number;
+    login: string;
+    userName: string;
+    email: string;
+    refreshToken: string;
+    fa2: boolean;
+    fa2Secret: string;
+    fa2QRCode: string;
+    hasPassword: boolean;
+    hash: string;
+    avatar: string;
+    resetAvatar: string;
+    is42: boolean;
+    id42: number;
+    lastName: string;
+    firstName: string;
+    friends: string[];
+    friendRequestsSent: string[];
+    pendindFriendRequests: string[];
+    blockedUser: string[];
+    blockedBy: string[];
+    rank: number;
+    title: string;
+    wonGameNbr: number;
+    lostGameNbr: number;
+    gamesAsPlayer1: GameEntity[];
+    gamesAsPlayer2: GameEntity[];
+    chatRoomMembers: ChatRoomMember[];
+    messages: ChatMessage[];
+    emailToLowerCases(): void;
+}
