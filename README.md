@@ -42,7 +42,9 @@ Its lightweight components, compiled during the build process, ensure optimal pe
 Svelte's simplicity and adherence to web standards facilitate swift adoption and seamless integration into existing projects. 
 With unparalleled performance and developer-friendly design, Svelte stands out as a top choice for modern web development, poised to revolutionize the field.
 
-For more details, check out the full article [here](https://medium.com/@arxpoetica/top-5-reasons-you-should-use-svelte-on-your-current-project-right-now-e2f6835e904f).
+For more details, check out the full article [here]:Top 5 Reasons You Should Use Svelte on Your Current Project Right Now (https://medium.com/@arxpoetica/top-5-reasons-you-should-use-svelte-on-your-current-project-right-now-e2f6835e904f).
+
+,also [SvelteDoc](https://svelte.dev)
 
 ## Images of my website
 ### When the frontend port is up, we can enter to the main page via API42.
